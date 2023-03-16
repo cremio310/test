@@ -1,0 +1,72 @@
+.services {
+  &__main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5rem;
+  }
+
+  .service {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-gap: 2rem;
+
+    max-width: 42rem;
+    margin: 0 auto;
+
+    &__icon {
+      align-self: flex-start;
+      svg {
+        width: 5rem;
+        height: 5rem;
+      }
+    }
+
+    &__info {
+      .title {
+        text-transform: uppercase;
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .text {
+        font-size: $default-font-size;
+        color: $color-grey-dark-2;
+      }
+    }
+  }
+}
+
+.portfolio {
+  &__main {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.faq {
+  background: $color-grey-light-2;
+  &__main {
+    margin-top: 10rem;
+  }
+}
+
+.blog {
+  &__main {
+    margin-top: 10rem;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+  }
+}
+
+.facts {
+  &__main {
+    margin-top: 10rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+  }
+}

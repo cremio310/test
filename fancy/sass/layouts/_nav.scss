@@ -1,0 +1,171 @@
+body {
+	overflow-x: hidden;
+}
+
+.navigation {
+	// position: fixed;
+	width: 100%;
+	height: 10vh;
+	background: var(--color-bg);
+
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 10vh;
+	}
+
+	&__logo {
+		a {
+			text-transform: capitalize;
+			font-size: 4rem;
+			color: var(--color-primary);
+		}
+	}
+
+	&__menu {
+		display: flex;
+		grid-gap: 5rem;
+		.links {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			grid-gap: 3rem;
+
+			.item {
+				cursor: pointer;
+
+				position: relative;
+				padding: 0.4rem 0;
+				.line {
+					position: absolute;
+					width: 0%;
+					height: 2px;
+					left: 0;
+					bottom: 0;
+					background: var(--color-primary);
+					transition: all 0.3s ease;
+				}
+
+				a {
+					text-transform: uppercase;
+					font-size: 2rem;
+					color: var(--color-black);
+
+					transition: all 0.3s ease;
+				}
+
+				&:hover {
+					a {
+						color: var(--color-primary);
+					}
+					.line {
+						width: 100%;
+					}
+				}
+			}
+		}
+
+		.icons {
+			display: flex;
+			grid-gap: 2rem;
+			cursor: pointer;
+
+			div {
+				background: var(--color-primary);
+				width: 3.5rem;
+				height: 3.5rem;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				box-shadow: 0 10px 20px rgba($color: #000000, $alpha: 0.2);
+
+				transition: all 0.6s ease;
+				&:hover {
+					transform: translateY(-5px);
+					box-shadow: 0 10px 20px rgba($color: #000000, $alpha: 0.4);
+				}
+			}
+
+			svg {
+				width: 2rem;
+				height: 2rem;
+				fill: var(--color-white);
+			}
+		}
+	}
+
+	//responsive
+	@include respond(tab-port) {
+		//we need to hide overflow x on body
+		padding: 0 3rem;
+		&__menu {
+			position: absolute;
+			right: 0;
+			top: 10vh;
+			height: 90vh;
+			background: var(--color-primary);
+			transform: translateX(100%);
+			transition: transform 0.3s ease-in;
+			.icons {
+				visibility: hidden;
+			}
+
+			.links {
+				flex-direction: column;
+				align-items: center;
+				justify-content: space-around;
+				width: 50%;
+				z-index: 9;
+
+				transform: translateX(75%);
+
+				.item {
+					.line {
+						background: var(--color-white);
+					}
+					a {
+						color: var(--color-white) !important;
+					}
+				}
+			}
+		}
+
+		&__link {
+			opacity: 0;
+		}
+
+		.burger {
+			display: block;
+		}
+	}
+}
+
+.burger {
+	display: none;
+	cursor: pointer;
+}
+.burger div {
+	width: 25px;
+	height: 3px;
+	background-color: var(--color-primary);
+	margin: 5px;
+
+	transition: all 0.3s ease;
+}
+
+.nav-active {
+	transform: translateX(0%);
+}
+
+.toggle .line1 {
+	transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+	opacity: 0;
+}
+
+.toggle .line3 {
+	transform: rotate(45deg) translate(-5px, -6px);
+}

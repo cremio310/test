@@ -1,0 +1,43 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+	// This defines what 1rem is
+	font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+}
+body {
+	font-size: 10px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	/*font-size: 16px;*/
+	line-height: 1.7;
+	color: var(--color-grey-dark);
+
+	background-color: var(--color-bg);
+}
+.container {
+	max-width: 120rem;
+	margin: 0 auto;
+
+	@include respond(tab-land) {
+		padding: 0 5rem;
+	}
+
+	@include respond(phone) {
+		padding: 0 2.5rem;
+	}
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}

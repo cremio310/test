@@ -1,0 +1,30 @@
+.stat {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  width: 22rem;
+  height: 24rem;
+
+  box-shadow: 0 10px 20px rgba($color: #000000, $alpha: 0.2);
+
+  .icon {
+    width: 5rem;
+    height: 5rem;
+    fill: $color-grey;
+  }
+
+  .number {
+    font-size: 3rem;
+    color: $color-primary;
+  }
+
+  .title {
+    color: $color-grey-dark-1;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+  }
+}

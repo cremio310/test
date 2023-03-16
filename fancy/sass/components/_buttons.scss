@@ -1,0 +1,147 @@
+.btn {
+	display: block;
+	padding: 1.5rem 3rem;
+	border: none;
+	background: none;
+	outline: none;
+	cursor: pointer;
+
+	margin: 0 auto;
+
+	font-size: var(--default-font-size);
+	text-transform: capitalize;
+	box-shadow: 0 10px 20px rgba($color: #000000, $alpha: 0.2);
+
+	transition: all 0.3s ease;
+
+	&:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 20px 25px rgba($color: #000000, $alpha: 0.2);
+	}
+
+	&:active {
+		transform: translateY(-2px);
+		box-shadow: 0 15px 20px rgba($color: #000000, $alpha: 0.15);
+	}
+
+	&--primary {
+		background: var(--color-primary);
+		color: var(--color-white);
+	}
+
+	&--white {
+		background: var(--color-white);
+		color: var(--color-primary);
+	}
+
+	&--icon {
+		display: inline-block;
+		width: min-content;
+		padding: 1rem;
+		background: var(--color-white);
+		color: var(--color-primary);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		svg {
+			width: 2.3rem;
+			height: 2.3rem;
+			transform: rotate(180deg);
+		}
+	}
+}
+
+.btn-top {
+	display: none;
+	position: fixed;
+	bottom: 50px;
+	right: 50px;
+	z-index: 99;
+	font-size: 18px;
+	background: none;
+	outline: none;
+	background-color: var(--color-primary);
+	border: 1px solid var(--color-white);
+
+	cursor: pointer;
+	padding: 15px;
+	border-radius: 4px;
+
+	transition: all 0.3s ease;
+
+	svg {
+		width: 20px;
+		height: 20px;
+		fill: var(--color-white);
+	}
+	&:hover {
+		border: 1px solid var(--color-primary);
+		background: var(--color-white);
+
+		svg {
+			fill: var(--color-primary);
+		}
+	}
+}
+
+.swatch {
+	background: white;
+	display: block;
+	position: fixed;
+	top: 150px;
+	right: 50px;
+	padding: 0;
+	overflow: hidden;
+	background-color: var(--color-primary);
+	border: 1px solid black;
+
+	input[type='color'] {
+		appearance: none;
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		background: none;
+		border: 0;
+		cursor: pointer;
+		height: 5rem;
+		padding: 0;
+		width: 5rem;
+	}
+
+	h3 {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		color: white;
+		text-transform: capitalize;
+	}
+
+	*:focus {
+		border-radius: 0;
+		outline: none;
+	}
+	::-webkit-color-swatch-wrapper {
+		padding: 0;
+	}
+
+	::-webkit-color-swatch {
+		border: 0;
+		border-radius: 0;
+	}
+
+	::-moz-color-swatch,
+	::-moz-focus-inner {
+		border: 0;
+	}
+
+	::-moz-focus-inner {
+		padding: 0;
+	}
+}
+.swatch-bg {
+	right: 120px;
+	background-color: var(--color-bg);
+	h3 {
+		color: black;
+	}
+}

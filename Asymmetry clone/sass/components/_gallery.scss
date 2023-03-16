@@ -1,0 +1,23 @@
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3rem;
+
+  &__item {
+    width: 35rem;
+    height: 25rem;
+
+    box-shadow: 0 20px 30px rgba($color: #000000, $alpha: 0.3);
+
+    &:hover img {
+      transform: scale(1.05);
+      box-shadow: 0 20px 30px rgba($color: #000000, $alpha: 0.4);
+    }
+
+    img {
+      transition: all 0.3s ease;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

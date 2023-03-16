@@ -1,0 +1,43 @@
+.heading {
+  max-width: 55rem;
+  margin-bottom: 7rem;
+
+  &__title {
+    position: relative;
+    text-transform: capitalize;
+    font-size: 3rem;
+    margin-bottom: 1.6rem;
+  }
+
+  &__line {
+    width: 50px;
+    height: 2px;
+    background: $color-primary;
+
+    margin-top: 0.7rem;
+  }
+
+  &__text {
+    font-size: $default-font-size + 0.2;
+    font-weight: 400;
+    color: $color-grey-dark-2;
+    line-height: 1.5;
+  }
+}
+
+.heading--center {
+  margin: 0 auto;
+  text-align: center;
+
+  .heading__line {
+    margin: 0.7rem auto;
+  }
+}
+
+.white {
+  color: $color-white;
+
+  .heading__line {
+    background: $color-white;
+  }
+}

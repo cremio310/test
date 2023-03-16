@@ -1,0 +1,80 @@
+.header {
+	padding-top: 10vh;
+	height: 100vh;
+	width: 100%;
+
+	@include respond(phone) {
+		height: 50vh;
+	}
+
+	.bg-video {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+
+		overflow: hidden;
+
+		@include respond(phone) {
+			height: 50vh;
+		}
+
+		.overlay {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			bottom: 0;
+
+			background: rgba($color: #000000, $alpha: 0.5);
+		}
+
+		&__content {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	.content {
+		position: absolute;
+		bottom: 5vh;
+		left: 50%;
+		transform: translateX(-50%);
+
+		max-width: 50rem;
+
+		@include respond(phone) {
+			bottom: 55vh;
+			width: minmax(20rem, 30rem);
+		}
+
+		@include respond(small-phone) {
+			width: 25rem;
+		}
+
+		.btn--icon {
+			background: var(--color-primary);
+			svg {
+				fill: var(--color-bg);
+			}
+		}
+		h1 {
+			font-size: 2.5rem;
+			color: rgba($color: var(--color-white), $alpha: 0.7);
+
+			text-align: center;
+			margin-bottom: 1rem;
+
+			@include respond(phone) {
+				font-size: 2rem;
+			}
+
+			@include respond(small-phone) {
+				font-size: 1.6rem;
+			}
+		}
+	}
+}

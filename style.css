@@ -1,0 +1,16 @@
+body {
+    background-color: black;
+}
+
+img{
+    height: 300px;
+   width: 500px;
+    object-fit: fill;
+}
+.card{
+    display: flex;
+    float: left;
+    padding: 20px;
+   height: 300px;
+   width: 500px;
+}

@@ -1,0 +1,41 @@
+.card {
+  max-width: 35rem;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba($color: #000000, $alpha: 0.1);
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 20px rgba($color: #000000, $alpha: 0.2);
+  }
+
+  &__photo {
+    height: 25rem;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__infos {
+    padding: 2rem;
+    .title {
+      font-size: 1.8rem;
+      font-weight: 400;
+      text-transform: capitalize;
+      color: $color-primary;
+    }
+
+    .text {
+      margin: 1.5rem 0;
+      font-size: $default-font-size;
+    }
+
+    .publication {
+      color: $color-grey-dark-1;
+    }
+  }
+}
